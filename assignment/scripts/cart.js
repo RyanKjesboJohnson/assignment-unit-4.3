@@ -33,12 +33,57 @@ function empty () {
 empty();
 console.log("the basket currently should be empty and has these items in it:", basket);
 
+//Stretch question 1
+const maxItems = 5;
+
+//stretch question 2
+function isFull() {
+    if (basket.length<maxItems) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+console.log("adding tomato is:", addItem('tomato')); //adding items back to test
+console.log("The basket now includes:", basket);
+
+console.log("adding spinach is:", addItem('spinach'));
+console.log("The basket now includes:", basket);
+
+console.log("adding burrata is:", addItem('burrata'));
+console.log("The basket now includes:", basket);
+
+console.log("The basket currently has", basket.length, "of", maxItems, "total items in it.");
+console.log("The basket is currently full:", isFull());
+
+console.log("adding pasta is:", addItem('pasta'));  //filling up the basket to test
+console.log("The basket now includes:", basket);
+
+console.log("adding EVOO is:", addItem('EVOO'));
+console.log("The basket now includes:", basket);
+
+console.log("The basket currently has", basket.length, "of", maxItems, "total items in it.");
+console.log("The basket is currently full:", isFull());
 
 
+//stretch item 3
+//when I try to update addItem it errors out, how to update the function
+basket.pop();
 
+function addItem2(item) {
+    if (isFull()) {
+        return true;
+        
+    }
+    else {
+        basket.push(item);
+        return false;
+    }
+}
 
-
-
+console.log(addItem2('mushrooms'));
+console.log(basket);
 
 // DO NOT MODIFY
 // Used for automated testing
