@@ -78,14 +78,10 @@ console.log("The basket now includes:", basket);
 console.log("The basket currently has", basket.length, "of", maxItems, "total items in it.");
 console.log("The basket is currently full:", isFull());
 
-//stretch item 3
-//when I try to update addItem it errors out, how to update the function
-
-
-
 console.log(addItem ('mushrooms'));
 console.log(basket);
 
+//stretch item 4
 function removeItem(item) {
     let index = basket.indexOf(item);
     if (index > 0){
