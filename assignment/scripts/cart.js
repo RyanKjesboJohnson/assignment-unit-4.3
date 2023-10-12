@@ -4,9 +4,10 @@ console.log('***** Cart Functions *****');
 
 let basket = [];
 
+
 function addItem (item) {
     basket.push (item);
-    return true
+    return true;
 }
 
 
@@ -45,6 +46,7 @@ function isFull() {
     }
 }
 
+
 console.log("adding tomato is:", addItem('tomato')); //adding items back to test
 console.log("The basket now includes:", basket);
 
@@ -66,24 +68,37 @@ console.log("The basket now includes:", basket);
 console.log("The basket currently has", basket.length, "of", maxItems, "total items in it.");
 console.log("The basket is currently full:", isFull());
 
-
 //stretch item 3
 //when I try to update addItem it errors out, how to update the function
 basket.pop();
 
-function addItem2(item) {
+function addItem2 (item) {
     if (isFull()) {
-        return true;
-        
+        return false;
     }
     else {
         basket.push(item);
-        return false;
+        return true;
     }
 }
 
-console.log(addItem2('mushrooms'));
+console.log(addItem2 ('mushrooms'));
 console.log(basket);
+
+function removeItem(item) {
+    let index = basket.indexOf(item);
+    if (index > 0){
+        basket.splice(index, 1);
+        return item
+     } else {
+        return null
+     }
+}
+
+console.log(removeItem('pasta'));
+console.log(basket);
+
+console.log(removeItem('wine'));
 
 // DO NOT MODIFY
 // Used for automated testing
