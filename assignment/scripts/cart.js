@@ -4,11 +4,22 @@ console.log('***** Cart Functions *****');
 
 let basket = [];
 
+//Stretch question 1
+const maxItems = 5;
+
+
+//update addItem for stretch question 3
 
 function addItem (item) {
-    basket.push (item);
-    return true;
+    if (isFull()) {
+        return false;
+    }
+    else {
+        basket.push(item);
+        return true;
+    }
 }
+
 
 
 console.log("adding tomato is:", addItem('tomato'));
@@ -34,8 +45,7 @@ function empty () {
 empty();
 console.log("the basket currently should be empty and has these items in it:", basket);
 
-//Stretch question 1
-const maxItems = 5;
+
 
 //stretch question 2
 function isFull() {
@@ -70,19 +80,10 @@ console.log("The basket is currently full:", isFull());
 
 //stretch item 3
 //when I try to update addItem it errors out, how to update the function
-basket.pop();
 
-function addItem2 (item) {
-    if (isFull()) {
-        return false;
-    }
-    else {
-        basket.push(item);
-        return true;
-    }
-}
 
-console.log(addItem2 ('mushrooms'));
+
+console.log(addItem ('mushrooms'));
 console.log(basket);
 
 function removeItem(item) {

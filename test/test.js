@@ -41,7 +41,15 @@ describe('Automated tests', function () {
         if(typeof basket === 'array') {
             originalBasket = [...basket];
         }    
+        
     });
+
+    beforeEach (function(){
+        let { basket } = testItems;
+        basket.length =0;
+
+    })
+
     after(function () {
         // runs once after the last test in this block
         if(typeof basket === 'array') {
